@@ -17,7 +17,7 @@
 
  console.log("Bienvenue chez nous"); */
 
-let heure = Number(prompt("il est quel heure ?"));
+/* let heure = Number(prompt("il est quel heure ?"));
 
 let minute = Number(prompt("Combien de minutes"));
 
@@ -29,9 +29,10 @@ if(seconde>=0 && seconde< 59){
     console.log(`il est ${heure}h ${minute}min ${seconde}s`);
    
 }else if(seconde==59){
+    
+    seconde = 0 ;
 
     if(minute>=0 && minute<59){
-        seconde = 0 ;
         minute = minute + 1 ;
         console.log(`il est ${heure}h ${minute}min ${seconde}s`);
 
@@ -39,7 +40,6 @@ if(seconde>=0 && seconde< 59){
         
         if(heure>=0 && heure<23){
 
-            seconde = 0 ;
             minute = 0;
             heure = heure + 1 ;
             console.log(`il est ${heure}h ${minute}min ${seconde}s`);
@@ -51,6 +51,15 @@ if(seconde>=0 && seconde< 59){
             console.log(`il est ${heure}h ${minute}min ${seconde}s`);
         }
     }
+} */
+
+// code de multiplication
+
+let nombre = Number(prompt("Vous voulez la table de multiplication de quel nombre"));
+
+for(let i=0 ; i<13; i++){
+    
+    console.log(`${nombre} x ${i} = ${nombre*i}`);
 }
 
 
