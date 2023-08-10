@@ -224,7 +224,7 @@ class Personne{
         this.nom = nom;
         this.prenom = prenom;
     }
-    
+
     isliving = true ;
 };
 
@@ -244,3 +244,4 @@ let jean = new Etudiant("SESSOU", "jean de dieu", "GM");
 console.log(jean);
 
 jean.presentation();
+
