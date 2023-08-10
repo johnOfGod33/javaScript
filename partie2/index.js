@@ -114,7 +114,7 @@ let chiffre = [10, 18, 13, 11, 7, 5, 3] ;
 showTab(chiffre);
  */
 
-let tableauFilms = [
+/* let tableauFilms = [
     {
         Titre : "avatar",
         annee : 1990
@@ -143,7 +143,7 @@ let showTab = (monTab) => {
     }
 }
 
-showTab(tableauFilms);
+showTab(tableauFilms); */
 
 /* let comparaison = (monTab) => {
     for(let element of monTab){
@@ -162,7 +162,7 @@ showTab(tableauFilms);
 
 comparaison(tableauFilms); */
 
-let nombre = tableauFilms[0].annee;
+/* let nombre = tableauFilms[0].annee;
 
 let comparaison = (monTab) => {
     for(let element of monTab){
@@ -173,4 +173,74 @@ let comparaison = (monTab) => {
     console.log(`la plus vielle annee est ${nombre}`);
 }
 
-comparaison(tableauFilms);
+comparaison(tableauFilms); */
+
+/* class Personne{  // cree une class avec le mot clé class
+
+    nom = "Saint";
+    prenom = "franklin";
+
+    presentation(){
+        console.log(`je m'appelle ${this.prenom} ${this.nom}`);
+    }
+
+};
+
+let koffi = new Personne();
+
+console.log(koffi); */
+
+/* class Personne{
+    constructor(nom, prenom){ //on utilise le contrustor pour customise les personnes
+        this.nom = nom ;
+        this.prenom = prenom;
+    }
+
+    presentation(){
+        console.log(`je m'appelle ${this.prenom} ${this.nom}`);
+    }
+}
+
+let franklin = new Personne("Saint", "franklin");
+
+franklin.presentation(); */
+
+/* class Animals{
+    constructor(nom){
+        this.nom = nom ;
+    }
+}
+
+let chien = new Animals("tyson");
+
+let chat = new Animals("sunshine");
+
+console.log(chien);
+
+console.log(chat); */
+
+class Personne{
+    constructor(nom, prenom){
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+    
+    isliving = true ;
+};
+
+class Etudiant extends Personne{
+    constructor(nom, prenom, filiere){
+        super(nom, prenom);
+        this.filiere = filiere;
+    }
+
+    presentation(){
+        console.log(`je m'appelle ${this.nom} ${this.prenom}.je suis en ${this.filiere}`);
+    }
+}
+
+let jean = new Etudiant("SESSOU", "jean de dieu", "GM");
+
+console.log(jean);
+
+jean.presentation();
