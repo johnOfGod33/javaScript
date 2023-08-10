@@ -127,7 +127,7 @@ let tableauFilms = [
 
     {
         Titre : "wakanda",
-        annee : 2015
+        annee : 1960
     },
 
     {
@@ -145,21 +145,32 @@ let showTab = (monTab) => {
 
 showTab(tableauFilms);
 
-let comparaison = (monTab) => {
-
-    for(let i=0; i<monTab.length; i++){
+/* let comparaison = (monTab) => {
+    for(let element of monTab){
         let nombre = 0 ;
-        for (let j = 0; j < monTab.length; j++) {
+        for (let element2 of monTab) {
 
-            if(monTab[i].annee<monTab[j].annee){
+            if(element.annee<element2.annee){
                 nombre = nombre + 1 ;
-            }
-            
+            } 
         }
         if(nombre==3){
-            console.log(`le film le plus ancien est celui de ${monTab[i].Titre} sorti en ${monTab[i].annee}`);
+            console.log(`le film le plus ancien est celui de ${element.Titre} sorti en ${element.annee}`);
         }
     }
+}
+
+comparaison(tableauFilms); */
+
+let nombre = tableauFilms[0].annee;
+
+let comparaison = (monTab) => {
+    for(let element of monTab){
+        if (element.annee<nombre){
+            nombre = element.annee;
+        }
+    }
+    console.log(`la plus vielle annee est ${nombre}`);
 }
 
 comparaison(tableauFilms);
